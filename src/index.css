@@ -1,0 +1,79 @@
+@import "tailwindcss";
+/* Webfonts are loaded via <link> in index.html — a CSS @import here gets
+   reordered after Tailwind's rules and silently dropped by the CSS optimizer. */
+
+@theme {
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --color-ink: #14120f;
+  --color-paper: #faf8f4;
+  --color-stone: #dedad2;
+  --color-stone-dark: #b8b2a4;
+  --color-clay: #a4491f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.tracking-widest-plus {
+  letter-spacing: 0.22em;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.35s ease-out;
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+.animate-slide-in-right {
+  animation: slide-in-right 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.input {
+  width: 100%;
+  border: 1px solid var(--color-stone);
+  background: var(--color-paper);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  outline: none;
+}
+.input:focus {
+  border-color: var(--color-ink);
+}
+
+/* minimal scrollbar for horizontal rails */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--color-stone-dark);
+}
