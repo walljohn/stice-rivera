@@ -54,13 +54,13 @@ export default function Home() {
       {/* Hero */}
       <section className="relative h-[86vh] min-h-[520px] w-full overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1620853313566-e91fe0f3b634?w=1800&q=80&fit=crop&auto=format"
-          alt="Stice Rivera autumn collection"
+          src="https://images.unsplash.com/photo-1781455817728-4d6638713f78?w=1800&q=80&fit=crop&auto=format"
+          alt="Stice Rivera summer collection, overlooking the Mediterranean coast"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-ink/5 to-transparent" />
         <div className="relative h-full flex flex-col items-center justify-end text-center text-paper pb-16 px-4">
-          <p className="text-xs tracking-widest-plus uppercase mb-3">Autumn Collection '26</p>
+          <p className="text-xs tracking-widest-plus uppercase mb-3">Summer Collection '26</p>
           <h1 className="font-display text-5xl sm:text-7xl mb-6">Stice Rivera</h1>
           <Link
             to="/shop"
@@ -134,6 +134,22 @@ export default function Home() {
           {newIn.slice(0, 8).map((p) => (
             <ProductCard key={p.slug} product={p} />
           ))}
+        </div>
+      </section>
+
+      {/* Coastal editorial band */}
+      <section className="relative h-[60vh] min-h-[380px] w-full overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1515400276915-8aa3a8fd70f4?w=1800&q=80&fit=crop&auto=format"
+          alt="Positano, on the Amalfi Coast"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-ink/25" />
+        <div className="relative h-full flex flex-col items-center justify-center text-center text-paper px-4">
+          <p className="text-xs tracking-widest-plus uppercase mb-4">From the South of France to the Amalfi Coast</p>
+          <p className="font-display text-3xl sm:text-5xl max-w-xl leading-tight text-balance">
+            Cut for terraces, boat decks, and long lunches that run past sundown.
+          </p>
         </div>
       </section>
 
